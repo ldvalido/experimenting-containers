@@ -5,6 +5,7 @@
 #include <sys/syscall.h>      /* Definition of SYS_* constants */
 #include <errno.h>
 
+//https://man7.org/linux/man-pages/man8/pivot_root.8.html
 
 void logText(char* text){
     printf("%s",text);
