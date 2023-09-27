@@ -7,19 +7,19 @@
 
 
 void logText(char* text){
-    printf(text);
+    printf("%s",text);
 }
 
 int pivot_root(const char *new_root, const char *put_old) {
     int opresult = syscall(SYS_pivot_root,  *new_root, *put_old);
     if (opresult != 0) {
         printf("%d\n",errno);
-        printf(strerror(errno));
+        logText(strerror(errno));
     }
     return opresult;
 }
 
-int writefile(char* filename) {
+void writefile(char* filename) {
     FILE *fp;
     fp  = fopen (filename, "w");
     fclose(fp);

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int writefile(char* filename) {
+void writefile(char* filename) {
     FILE *fp;
     fp  = fopen (filename, "w");
     fclose(fp);
